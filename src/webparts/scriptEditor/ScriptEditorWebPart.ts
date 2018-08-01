@@ -5,7 +5,6 @@ import { SPComponentLoader } from '@microsoft/sp-loader';
 import {
     BaseClientSideWebPart,
     IPropertyPaneConfiguration,
-    PropertyPaneCustomField,
     PropertyPaneToggle,
     PropertyPaneTextField
 } from '@microsoft/sp-webpart-base';
@@ -48,14 +47,6 @@ export default class ScriptEditorWebPart extends BaseClientSideWebPart<IScriptEd
         return Version.parse('1.0');
     }
 
-    protected renderLogo(domElement: HTMLElement) {
-        domElement.innerHTML = `
-      <div style="margin-top: 30px">
-        <div style="float:right">Author: <a href="mailto:mikael.svenson@puzzlepart.com" tabindex="-1">Mikael Svenson</a></div>
-        <div style="float:right"><a href="https://www.puzzlepart.com/" target="_blank"><img src="//www.puzzlepart.com/wp-content/uploads/2017/08/Pzl-LogoType-200.png" onerror="this.style.display = \'none\'";"></a></div>
-      </div>`;
-    }
-
     protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
         return {
             pages: [
@@ -78,10 +69,6 @@ export default class ScriptEditorWebPart extends BaseClientSideWebPart<IScriptEd
                                     checked: this.properties.spPageContextInfo,
                                     onText: "Enabled",
                                     offText: "Disabled"
-                                }),
-                                PropertyPaneCustomField({
-                                    onRender: this.renderLogo,
-                                    key: "logo"
                                 })
                             ]
                         }
