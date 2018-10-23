@@ -10,5 +10,9 @@
         }
       ]
     }
+  },
+  "externals": {},
+  "localizedResources": {
+    "HelloWorldWebPartStrings": "lib/webparts/scriptEditor/loc/{locale}.js"
   }
 }

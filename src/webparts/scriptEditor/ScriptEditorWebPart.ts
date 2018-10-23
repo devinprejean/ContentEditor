@@ -10,7 +10,7 @@ import {
 } from '@microsoft/sp-webpart-base';
 import ScriptEditor from './components/ScriptEditor';
 import { IScriptEditorProps } from './components/IScriptEditorProps';
-import { IScriptEditorWebPartProps } from './IScriptEditorWebPartProps';
+import { IScriptEditorWebPartProps } from './components/IScriptEditorWebPartProps';
 
 export default class ScriptEditorWebPart extends BaseClientSideWebPart<IScriptEditorWebPartProps> {
     public save: (script: string) => void = (script: string) => {
